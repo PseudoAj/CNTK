@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+    <RepoRootPath>$(MSBuildThisFileDirectory)</RepoRootPath>
+    <RelativeProjectPath>$(MSBuildProjectDirectory.Substring($(MSBuildThisFileDirectory.Length)))</RelativeProjectPath>
+
+    <OutDir>$(RepoRootPath)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(RepoRootPath)$(Platform)\.build\$(Configuration)\$(RelativeProjectPath)\</IntDir>
+
     <DebugBuild>false</DebugBuild>
     <DebugBuild Condition="$(Configuration.StartsWith('Debug'))">true</DebugBuild>
 

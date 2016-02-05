@@ -59,7 +59,6 @@
   <PropertyGroup>
     <IncludePath>..\Common\include;$(ACML_PATH)\include;$(CudaPath)\include;$(CUB_PATH);$(CuDnnIncPath);$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration);$(ACML_PATH)\lib;$(CudaPath)\lib\$(Platform);$(CuDnnLibPath);$(LibraryPath)</LibraryPath>
-    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
